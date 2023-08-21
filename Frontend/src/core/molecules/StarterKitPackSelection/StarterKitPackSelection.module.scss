@@ -1,0 +1,59 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.title {
+  @include toRem('font-size', 30);
+}
+
+.description {
+  @include toRem('font-size', 18);
+}
+.mandatory {
+  @include toRem('padding', 16 16 16 32);
+}
+
+.details {
+  color: $darkercyan;
+  cursor: pointer;
+}
+.table {
+  border: 1px solid $offwhite;
+}
+.closeBtn {
+  position: absolute;
+  @include toRem('right', 16);
+  @include toRem('top', 22);
+  @include toRem('font-size', 12);
+}
+.submitBtn {
+  width: 100%;
+  @include respond-to('tab') {
+    width: initial;
+  }
+}
+.termsAndConditions {
+  display: inline;
+  > * {
+    display: inline;
+  }
+}
+.checkbox {
+  @include toRem('margin-right', 16);
+}
+.modal {
+  padding: 0;
+  h3 {
+    @include toRem('font-size', 24);
+    @include toRem('padding', 16);
+    font-weight: bold;
+    border-bottom: 1px solid $offwhite;
+  }
+  p {
+    @include toRem('font-size', 14);
+    @include toRem('padding', 16);
+  }
+  ul {
+    margin: 0;
+    @include toRem('padding', 16 16 16 32);
+  }
+}

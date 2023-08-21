@@ -1,0 +1,82 @@
+@import 'styles/sass/abstracts/mixins';
+
+.modern {
+  &_componentCardWrapper {
+    @include toRem('padding-bottom', 40);
+  }
+  &_heading {
+    font-weight: normal;
+    text-align: center;
+    @include toRem('font-size', 50);
+    @include toRem('margin-bottom', 60);
+    @include toRem('line-height', 60);
+    @include respond-to('tab') {
+      @include toRem('font-size', 80);
+      @include toRem('line-height', 80);
+      @include toRem('padding-bottom', 10);
+    }
+  }
+  &_subHeading {
+    font-weight: normal;
+    text-align: center;
+    @include toRem('font-size', 38);
+    @include toRem('margin', 50 0 10 0);
+    @include toRem('line-height', 38);
+  }
+
+  &_cardWrapper {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    @include toRem('margin-bottom', 40);
+    @include toRem('padding-top', 40);
+    @include respond-to('tab') {
+      height: 100%;
+      @include toRem('margin-bottom', 0);
+    }
+  }
+  &_cardHeading {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: justify;
+    @include toRem('margin', 30 0);
+    @include toRem('font-size', 18);
+    @include toRem('line-height', 22);
+    @include respond-to('tab') {
+      @include toRem('font-size', 20);
+    }
+  }
+  &_cardIcon {
+    @include toRem('width', 70);
+    @include toRem('height', 70);
+  }
+  &_cardCTA {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    min-width: 90%;
+    @include toRem('margin', 40 0);
+    @include toRem('padding', 7 30);
+    @include toRem('border-radius', 8);
+    @include toRem('font-size', 18);
+    @include respond-to('tab') {
+      @include toRem('font-size', 20);
+    }
+  }
+}
+
+.rteContent {
+  &_componentDescription {
+    p {
+      text-align: center;
+      @include toRem('font-size', 18);
+    }
+  }
+  &_description {
+    p {
+      @include toRem('line-height', 26);
+      @include toRem('margin', 40 40 0);
+      @include toRem('font-size', 18);
+    }
+  }
+}

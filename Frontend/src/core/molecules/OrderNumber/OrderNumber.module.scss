@@ -1,0 +1,18 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.wrapper {
+  @include toRem('min-height', 120);
+}
+
+.titleWrapper {
+  background-color: $lightgray;
+  color: $charcoal;
+  font-weight: 100;
+  @include toRem('padding-left', 10);
+  overflow-wrap: anywhere;
+}
+
+.detailsWrapper {
+  @include toRem('padding-left', 10);
+}

@@ -1,0 +1,26 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.panel {
+    border: 1px solid $panelBorder;
+    @include toRem('margin', 15 0 30);
+    @include toRem('border-radius', 3);
+    &_secondary{
+      border: 1px solid $grey;
+    }
+    &_content {
+      @include toRem('margin', 20 0);
+      @include toRem('padding', 0 15);
+    }
+    &_heading {
+      background-color: $panelHeadingBg;
+      color: $panelHeadingColor;
+      font-weight: 500;
+      @include toRem('font-size', 16);
+      @include toRem('padding', 10 15);
+      &_secondary{
+        background-color: $lightgray;
+        color: $black;
+      }
+    }
+  }

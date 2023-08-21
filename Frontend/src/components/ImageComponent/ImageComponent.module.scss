@@ -1,0 +1,17 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.ImageWrapper {
+    justify-items: center;
+  .image {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    @include toRem('margin-bottom',15);
+  }
+  .content {
+    font-weight: 700;
+    @include toRem('font-size', 14);
+    @include toRem('line-height', 16.8);
+  }
+}

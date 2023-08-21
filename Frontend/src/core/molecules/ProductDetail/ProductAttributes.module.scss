@@ -1,0 +1,100 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.quantityInput {
+  @include toRem('min-width', 80);
+  @include toRem('max-width', 180);
+  @include toRem('margin-right', 25);
+  @include respond-to('desktop') {
+    margin-right: 0;
+  }
+}
+.formButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  @include toRem('line-height', 34);
+  &_cirkle {
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid $black;
+    @include toRem('font-size', 30);
+    @include toRem('height', 36);
+    @include toRem('width', 36);
+    &_negative {
+      @include toRem('line-height', 32);
+    }
+  }
+}
+
+.formCheck {
+  @include toRem('font-size', 18);
+  @include respond-to('tab') {
+    @include toRem('font-size', 20);
+  }
+  input {
+    @include toRem('width', 13);
+    @include toRem('height', 13);
+    @include respond-to('tab') {
+      @include toRem('margin-top', 6);
+    }
+  }
+}
+.totalPrice {
+  font-weight: 500;
+  @include toRem('padding', 8 20);
+  & span {
+    text-align: end;
+    flex-grow: 2;
+  }
+}
+.autoshipPrice {
+  background-color: $oceanblue;
+  color: $white;
+  @include toRem('border-radius', 4);
+  @include toRem('padding', 8 20);
+  & span {
+    text-align: end;
+    flex-grow: 2;
+  }
+}
+.autoshipCheckbox {
+  @include toRem('margin-top', 20);
+}
+.addToBag {
+  &_button {
+    align-items: center;
+    border: 0;
+    background-color: $addtobag;
+    color: $white;
+    @include toRem('padding', 10 11);
+    @include toRem('font-size', 18);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $addtobag !important;
+      color: $black !important;
+    }
+    @include respond-to('tab') {
+      @include toRem('font-size', 26);
+    }
+  }
+  &_price {
+    color: $addtobag;
+    align-self: center;
+    @include toRem('font-size', 26);
+  }
+}
+.formInput {
+  border: 0;
+  border-bottom: 1px solid $black;
+  border-radius: 0;
+  box-sizing: content-box;
+  padding: 0;
+  text-align: center;
+  @include toRem('margin', 10);
+  @include toRem('height', 36);
+  @include toRem('line-height', 30);
+  @include toRem('font-size', 30);
+}

@@ -1,0 +1,144 @@
+.tk-omnes-pro {
+  font-family: 'omnes-pro', sans-serif;
+}
+
+.tk-foco {
+  font-family: 'foco', sans-serif;
+}
+
+.tk-semplicitapro {
+  font-family: 'semplicitapro', sans-serif;
+}
+
+/*
+.tk-nimbus-sans {
+  font-family: 'nimbus-sans', sans-serif;
+}
+
+.tk-baskerville-display-pt {
+  font-family: 'baskerville-display-pt', serif;
+} */
+
+@font-face {
+  font-family: 'semplicitapro';
+  src: url('/fonts/semplicita-pro.woff2') format('woff2'),
+    url('/fonts/semplicita-pro.woff') format('woff'),
+    url('/fonts/semplicita-pro.opentype') format('opentype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'semplicitapro';
+  src: url('/fonts/semplicitapro.woff2') format('woff2'),
+    url('/fonts/semplicitapro.woff') format('woff'),
+    url('/fonts/semplicitapro.opentype') format('opentype');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: omnes-pro;
+  src: url('/fonts/omnes-pro.woff2') format('woff2'), url('/fonts/omnes-pro.woff') format('woff'),
+    url('/fonts/omnes-pro.opentype') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: omnes-pro;
+  src: url('/fonts/omnespro.woff2') format('woff2'), url('/fonts/omnespro.woff') format('woff'),
+    url('/fonts/omnespro.opentype') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: omnes-pro;
+  src: url('/fonts/omnes-pro2.woff2') format('woff2'), url('/fonts/omnes-pro2.woff') format('woff'),
+    url('/fonts/omnes-pro2.opentype') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: foco;
+  src: url('/fonts/foco.woff2') format('woff2'), url('/fonts/foco.woff') format('woff'),
+    url('/fonts/foco.opentype') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: foco;
+  src: url('/fonts/foco2.woff2') format('woff2'), url('/fonts/foco2.woff') format('woff'),
+    url('/fonts/foco2.opentype') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: foco;
+  src: url('/fonts/foco3.woff2') format('woff2'), url('/fonts/foco3.woff') format('woff'),
+    url('/fonts/foco3.opentype') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+
+/* @font-face {
+    font-family: baskerville-display-pt;
+    src: url('/fonts/baskerville-display-pt.woff2') format('woff2'),
+      url('/fonts/baskerville-display-pt.woff') format('woff'),
+      url('/fonts/baskerville-display-pt.opentype') format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: nimbus-sans;
+    src: url('/fonts/nimbus-sans.woff2') format('woff2'),
+      url('/fonts/nimbus-sans.woff') format('woff'),
+      url('/fonts/nimbus-sans.opentype') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: nimbus-sans;
+    src: url('/fonts/nimbus-sans2.woff2') format('woff2'),
+      url('/fonts/nimbus-sans2.woff') format('woff'),
+      url('/fonts/nimbus-sans2.opentype') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: nimbus-sans;
+    src: url('/fonts/nimbus-sans3.woff2') format('woff2'),
+      url('/fonts/nimbus-sans3.woff') format('woff'),
+      url('/fonts/nimbus-sans3.opentype') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: nimbus-sans;
+    src: url('/fonts/nimbus-sans4.woff2') format('woff2'),
+      url('/fonts/nimbus-sans4.woff') format('woff'),
+      url('/fonts/nimbus-sans4.opentype') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: auto;
+  } */

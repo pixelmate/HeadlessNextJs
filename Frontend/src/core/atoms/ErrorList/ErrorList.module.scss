@@ -1,0 +1,7 @@
+@import 'styles/sass/abstracts/_mixins';
+.error_list_wrapper {
+  background-color: #ffffe0;
+  @include toRem('margin-top', 4);
+  @include toRem('padding', 10);
+  @include toRem('font-size', 13);
+}

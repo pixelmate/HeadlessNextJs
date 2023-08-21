@@ -1,0 +1,34 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.checkoutHeader {
+  &_main_nav {
+    @include toRem('padding', 0 20);
+    @include respond-to('desktop') {
+      @include toRem('padding', 0);
+    }
+  }
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include toRem('margin', 10 0 0);
+    @include respond-to('tab') {
+      flex-direction: unset;
+      align-items: flex-start;
+      @include toRem('margin', 0);
+    }
+  }
+  &_logo {
+    text-align: center;
+  }
+  &_contactDetails {
+    text-align: center;
+    color: $shadowblack;
+    @include toRem('font-size', 12);
+    @include toRem('margin', 5 0 5);
+    @include respond-to('tab') {
+      text-align: right;
+    }
+  }
+}

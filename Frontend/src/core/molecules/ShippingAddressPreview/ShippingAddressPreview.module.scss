@@ -1,0 +1,10 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.btn_link {
+  color: $captchaLinks;
+  @include toRem('font-size', 14);
+  &:hover {
+    color: $black;
+  }
+}

@@ -1,0 +1,43 @@
+@import 'styles/sass/abstracts/mixins';
+
+.productHighlightContainer {
+  @include toRem('margin-bottom', 80);
+  @include toRem('padding', 0);
+  &_body {
+    @include toRem('padding', 20);
+    @include toRem('margin', 130 0 60 0);
+    .title {
+      font-family: 'omnes-pro', sans-serif;
+      @include toRem('margin', 50 0 10 0);
+      @include toRem('font-size', 46);
+      @include respond-to('all-mobile') {
+        font-family: 'foco', sans-serif;
+        @include toRem('font-size', 38);
+        @include toRem('line-height', 40);
+      }
+    }
+    .sub_title {
+      font-family: 'omnes-pro', sans-serif;
+      @include respond-to('all-mobile') {
+        font-family: 'foco', sans-serif;
+        @include toRem('font-size', 24);
+        @include toRem('line-height', 28);
+      }
+    }
+    .tags {
+      max-width: 100%;
+      font-family: 'omnes-pro', sans-serif;
+      @include toRem('font-size', 18);
+      @include toRem('line-height', 23);
+      font-weight: 500;
+      @include respond-to('desktop') {
+        max-width: 65%;
+      }
+    }
+    //TODO Hotfix to be corrected after Sprint 3 demo (March 29th, 2023 12:20 PM)
+    &_productBannerImage {
+      height: 140%;
+      width: auto;
+    }
+  }
+}

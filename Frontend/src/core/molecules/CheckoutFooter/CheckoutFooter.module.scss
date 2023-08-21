@@ -1,0 +1,8 @@
+@import 'styles/sass/abstracts/mixins';
+
+.CheckoutFooterContainer {
+  @include toRem('padding', 0 20);
+  @include respond-to('desktop') {
+    @include toRem('padding', 0);
+  }
+}

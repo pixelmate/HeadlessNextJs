@@ -1,0 +1,12 @@
+@import 'styles/sass/abstracts/mixins';
+
+.relatedPosts {
+  @include toRem('padding-bottom', 15);
+  &_heading {
+    @include toRem('font-size', 18);
+  }
+  p {
+    @include toRem('margin', 0);
+    @include toRem('line-height', 25);
+  }
+}

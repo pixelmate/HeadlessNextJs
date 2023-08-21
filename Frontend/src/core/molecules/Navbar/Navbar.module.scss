@@ -1,0 +1,40 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.navbar {
+  background: $white;
+  position: absolute;
+  @include toRem('padding-top', 20);
+  @include toRem('bottom', 0);
+  width: 90vw;
+  margin: 0 auto;
+  overflow-y: auto;
+  display: block;
+  z-index: 100;
+  left: 5%;
+  top: 100%;
+  height: max-content;
+  max-height: calc(100vh - 6.25rem);
+  @include respond-to('tab') {
+    @include toRem('padding-top', 0);
+  }
+  @include respond-to('desktop') {
+    @include toRem('width', 730);
+    position: static;
+    height: 100%;
+    overflow-y: unset;
+    display: flex;
+  }
+  &_list {
+    display: block;
+    width: 100%;
+    @include toRem('padding-top', 0);
+    height: auto;
+    @include respond-to('desktop') {
+      display: table;
+      @include toRem('padding', 0);
+      @include toRem('margin', 0);
+      cursor: pointer;
+    }
+  }
+}

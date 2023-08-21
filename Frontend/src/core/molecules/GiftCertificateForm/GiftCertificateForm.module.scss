@@ -1,0 +1,7 @@
+@import 'styles/sass/abstracts/mixins';
+
+.giftCertificateForm{
+  textarea{
+    @include toRem('height', 75);
+  }
+}

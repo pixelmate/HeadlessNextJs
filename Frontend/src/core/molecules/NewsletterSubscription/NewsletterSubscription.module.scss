@@ -1,0 +1,60 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.RecaptaText {
+  p {
+    @include toRem('font-size', 12);
+    color: $captchaInfo;
+    a {
+      color: $darkercyan;
+      text-decoration: none;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+.disclaimerText {
+  @include toRem('font-size', 14);
+}
+.formContainer {
+  width: 95%;
+  @include toRem('padding', 0 25);
+  @include toRem('margin', 30 auto);
+  &_content {
+  @include toRem('padding', 20);
+  background: $oceanblue;
+  @include toRem('border-radius', 6);
+  }
+}
+.media {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  &_signUpButton {
+    @include toRem('font-size', 14);
+    @include toRem('line-height', 20);
+    @include toRem('height', 35);
+    @include toRem('margin-top', 20);
+    border: 1px solid $darkwhite;
+    @include respond-to(desktop){
+    width: 100%;
+    @include toRem('margin-top', 0);
+    }
+    &:focus {
+      color: (--bs-btn-color);
+      background-color: $white;
+      border-color: #86b7fe;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem #0d6efd40;
+    }
+  }
+}
+
+.signUpForm {
+  @include toRem('margin-top', 50);
+}
+
+.signUpText {
+  @include toRem('font-size', 14);
+}

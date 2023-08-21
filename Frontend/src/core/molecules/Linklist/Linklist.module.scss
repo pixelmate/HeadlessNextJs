@@ -1,0 +1,11 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.link {
+  a{
+    color: $black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

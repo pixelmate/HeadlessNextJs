@@ -1,0 +1,23 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.contentTabs_Container {
+  .nav {
+    border: 1px solid $offwhite;
+    border-top: none;
+    @include toRem('padding', 20);
+    @include toRem('margin-bottom', 20);
+  }
+
+  .tabs {
+    @include toRem('margin-top', 20);
+    li {
+      button {
+        border-radius: 0;
+        @include toRem('margin-right', 2);
+        @include toRem('font-size', 14);
+        @include toRem('padding', 10 12);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.sponsor_info {
+  @include fieldRepSectionInfo($lightgray);
+}

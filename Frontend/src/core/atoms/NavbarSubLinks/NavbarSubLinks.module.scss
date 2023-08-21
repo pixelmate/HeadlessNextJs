@@ -1,0 +1,49 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.navbarSubLinks {
+  display: none;
+  height: auto;
+  list-style: none;
+  @include toRem('margin', 0);
+  @include toRem('padding', 0 10);
+  @include respond-to('tab') {
+    @include toRem('padding', 0 20);
+  }
+  @include respond-to('desktop') {
+    position: absolute;
+    @include toRem('bottom', 0);
+    @include toRem('left', 0);
+    @include toRem('width', 660);
+    @include toRem('padding', 0 40 0 0);
+    transform: translateY(100%);
+    z-index: 10;
+    background: $lightwhite;
+    overflow: hidden;
+    @include toRem('border-radius', 0 0 4 4);
+  }
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    @include toRem('padding', 0 20);
+    @include respond-to('tab') {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+  .promotionalBanner {
+    display: none;
+    @include respond-to('tab') {
+      @include toRem('padding-top', 20);
+      display: block;
+      width: inherit;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

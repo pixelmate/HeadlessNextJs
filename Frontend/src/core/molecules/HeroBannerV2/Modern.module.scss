@@ -1,0 +1,19 @@
+@import "styles/sass/abstracts/mixins";
+
+
+.heroBannerV2_modern{
+    .modern_title {
+        font-weight: 700;
+        @include toRem('font-size', 50);
+        @include toRem('line-height',60);
+        @include respond-to('tab') {
+          @include toRem('font-size', 80);
+      
+        }
+      }
+      .responsive_image {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }
+}

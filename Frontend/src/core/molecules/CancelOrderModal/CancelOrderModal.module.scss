@@ -1,0 +1,9 @@
+@import 'styles/sass/variables/variables';
+
+.cancel_button {
+  border-color: $darkwhite;
+  &:hover {
+    border-color: $darkwhite;
+    background-color: $palegray;
+  }
+}

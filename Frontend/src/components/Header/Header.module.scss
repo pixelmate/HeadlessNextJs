@@ -1,0 +1,24 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.header {
+  z-index: 1;
+  width: 100%;
+  background: $white;
+  .main_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    @include toRem('padding', 0 20);
+    @include toRem('height', 70);
+    @include respond-to('tab') {
+    }
+    @include respond-to('desktop') {
+      @include toRem('padding', 0);
+      @include toRem('height', 100);
+    }
+  }
+}

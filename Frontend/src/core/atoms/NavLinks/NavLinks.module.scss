@@ -1,0 +1,74 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.navlink {
+  display: block;
+  text-transform: uppercase;
+  @include toRem('padding', 20);
+  @include respond-to('desktop') {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    @include toRem('padding', 0 10);
+  }
+  &.dropdown {
+    position: relative;
+    &::after {
+      position: absolute;
+      border: 4px solid transparent;
+      border-top-color: $shadowblack;
+      transition: all 0.1s ease-in-out;
+      content: '';
+      @include toRem('left', 112);
+      @include toRem('top', 30);
+      @include respond-to('desktop') {
+        top: 50%;
+        @include toRem('right', 30);
+        @include toRem('translate', -2 -2);
+      }
+      @include respond-to('extra-large-desktop') {
+        right: unset;
+        @include toRem('left', 120);
+      }
+    }
+    &:hover {
+      > a {
+        color: $darkyellow;
+      }
+      ul {
+        @include respond-to('desktop') {
+          display: block;
+        }
+      }
+      &::after {
+        border-top: 4px solid $darkyellow;
+      }
+    }
+  }
+  &_active {
+    ul {
+      display: block;
+      @include respond-to('desktop') {
+        display: none;
+      }
+    }
+  }
+  &_item {
+    color: $shadowblack;
+    @include toRem('font-size', 14);
+    @include toRem('padding', 10 13);
+    &:hover {
+      color: $darkyellow;
+    }
+    a {
+      text-decoration: none;
+      color: $shadowblack;
+      &:hover {
+        color: $darkyellow;
+      }
+    }
+  }
+}

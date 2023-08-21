@@ -1,0 +1,36 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.blogfacets {
+  @include toRem('padding', 15 35);
+  p {
+    color: $darkoceanblue;
+    @include toRem('font-size', 14);
+  }
+  ul {
+    @include toRem('padding', 0);
+    @include toRem('magin', 0);
+    li {
+      list-style: none;
+      @include toRem('padding', 10 0);
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: $darkwhite;
+        @include toRem('line-height', 25);
+        @include toRem('font-size', 14);
+        svg {
+          @include toRem('margin-right', 10);
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  span {
+    color: $white;
+    @include toRem('font-size', 14);
+  }
+}

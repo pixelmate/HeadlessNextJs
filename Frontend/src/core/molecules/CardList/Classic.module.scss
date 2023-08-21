@@ -1,0 +1,79 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.classic {
+  &_descriptionImageWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
+  &_heading {
+    font-weight: normal;
+    text-align: center;
+    @include toRem('font-size', 50);
+    @include toRem('margin-bottom', 60);
+    @include toRem('line-height', 60);
+    @include respond-to('tab') {
+      @include toRem('font-size', 80);
+      @include toRem('line-height', 80);
+      @include toRem('padding-bottom', 10);
+    }
+  }
+  &_subHeading {
+    font-weight: normal;
+    text-align: center;
+    @include toRem('font-size', 38);
+    @include toRem('margin', 50 0 10 0);
+    @include toRem('line-height', 38);
+  }
+
+  &_cardWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include toRem('padding', 30);
+    @include toRem('margin', 0 0 30 0);
+  }
+  &_cardHeading {
+    font-weight: normal;
+    @include toRem('padding-bottom', 10);
+    @include toRem('margin-bottom', 30);
+  }
+  &_cardImageWrapper {
+    text-align: center;
+  }
+  &_cardImage {
+    max-width: 100%;
+    height: auto;
+  }
+  &_flex {
+    display: flex;
+  }
+  &_componentCTA {
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    @include toRem('font-size', 16);
+    @include toRem('padding', 8 40);
+    @include toRem('letter-spacing', 1);
+    @include toRem('line-height', 16);
+    @include toRem('border-radius', 5);
+    @include toRem('margin', 20 0 0);
+    @include respond-to('tab') {
+      @include toRem('margin', 30 0 80);
+    }
+  }
+}
+
+.rteContent {
+  &_description {
+    p {
+      @include toRem('font-size', 16);
+      @include toRem('margin', 0 0 30);
+      @include respond-to('tab') {
+        @include toRem('font-size', 16);
+      }
+    }
+  }
+}

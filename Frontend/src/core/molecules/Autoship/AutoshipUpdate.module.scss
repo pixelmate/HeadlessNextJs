@@ -1,0 +1,22 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.autoship {
+  &_span{
+  @include toRem('font-size', 14);
+}
+  &_select {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: $white;
+    display: block;
+    background-color: $darkoceanblue;
+    @include toRem('padding', 7.5);
+    @include toRem('margin', 10 0);
+    @include toRem('border-radius', 4);
+  }
+  &_text_info {
+    color: $darkoceanblue;
+  }
+}

@@ -1,0 +1,6 @@
+@import 'styles/sass/abstracts/_mixins';
+.ccpa_modal_container {
+  .modal_width {
+    @include toRem('max-width', 600);
+  }
+}

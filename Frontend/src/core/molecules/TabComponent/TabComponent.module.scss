@@ -1,0 +1,9 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.nav {
+  border: 1px solid $offwhite;
+  border-top: none;
+  @include toRem('padding', 20);
+  @include toRem('margin-bottom', 20);
+}
+

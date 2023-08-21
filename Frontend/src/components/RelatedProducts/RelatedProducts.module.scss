@@ -1,0 +1,37 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.relatedProducts {
+  .title {
+    @include toRem('font-size', 26);
+    font-weight: 500;
+  }
+  .imageContainer {
+    @include toRem('padding', 25 25 0 25);
+    @include toRem('width',230);
+  }
+  .productText {
+    color: $globalsearchcolor;
+    text-decoration: none;
+    @include toRem('font-size', 14);
+    @include toRem('font-weight', 400);
+    @include toRem('line-height', 20);
+  }
+  @include toRem('margin', 20 0 40 0);
+}
+.navButtons {
+  @include respond-to('tab') {
+  }
+  > a {
+    width: auto;
+  }
+}
+.productContainer {
+  &:hover {
+    a {
+      .productText {
+        color: $black;
+      }
+    }
+  }
+}

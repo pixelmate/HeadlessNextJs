@@ -1,0 +1,71 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.subNavigationSectionLinks {
+  list-style: none;
+  text-align: left;
+  @include toRem('padding', 20 50 0 0);
+  @include toRem('margin', 0);
+  position: relative;
+  width: 60vw;
+  @include respond-to('tab') {
+    width: 25vw;
+    @include toRem('padding-right', 20);
+  }
+  @include respond-to('desktop') {
+    @include toRem('padding', 0 0 0 30);
+    width: auto;
+  }
+  &_heading {
+    display: inline-block;
+    @include toRem('padding-bottom', 6);
+
+    a {
+      @include toRem('font-size', 24);
+      @include toRem('padding', 4 0);
+      text-transform: capitalize;
+      text-decoration: none;
+      color: $darkgrey;
+      &:hover {
+        color: $darkorange;
+        text-decoration: underline;
+      }
+    }
+  }
+  li a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $darkgrey;
+    @include toRem('padding', 4 0);
+    @include toRem('font-size', 14);
+
+    &:hover {
+      color: $darkorange;
+      text-decoration: underline;
+    }
+  }
+  &:nth-child(2) {
+    a:hover {
+      color: $seablue;
+    }
+  }
+  &:nth-child(3) {
+    a:hover {
+      color: $seagreen;
+    }
+  }
+  img {
+    position: absolute;
+    @include toRem('top', 0);
+    @include toRem('right', 0);
+    @include respond-to('tab') {
+      @include toRem('top', 20);
+      @include toRem('right', 20);
+    }
+    @include respond-to('desktop') {
+      right: -40%;
+      @include toRem('top', 0);
+    }
+  }
+}

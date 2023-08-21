@@ -1,0 +1,30 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.orderSummary {
+  &_bg_saving_info {
+    color: $white;
+    background-color: $darkoceanblue;
+  }
+  &_personal_sales{
+    color: $darkoceanblue;
+  }
+  &_link {
+    height: 100%;
+    outline: none;
+    color: $white;
+    text-decoration: none;
+    border: 1px solid $black;
+    background-color: $success;
+    transition: all 0.3s ease-in-out;
+    @include toRem('font-size', 16);
+    @include toRem('line-height', 16);
+    @include toRem('border-radius', 4);
+    @include toRem('padding', 5 25);
+    &:hover {
+      color: $white;
+      border: 1px solid $black;
+      background-color: $green;
+    }
+  }
+}

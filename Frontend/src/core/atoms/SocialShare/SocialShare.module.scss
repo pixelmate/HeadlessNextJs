@@ -1,0 +1,25 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.socialShare {
+  display: flex;
+  align-items: center;
+  color: $white;
+  @include toRem('margin', 0 15 20 0);
+  @include toRem('padding', 2 5);
+  & span {
+    @include toRem('font-size', 12);
+    @include toRem('padding', 0 10 0 0);
+  }
+}
+
+.facebook {
+  @extend .socialShare;
+  background-color: $facebook;
+  @include toRem('border-radius', 4);
+}
+.twitter {
+  @extend .socialShare;
+  background-color: $twitter;
+  @include toRem('border-radius', 15);
+}

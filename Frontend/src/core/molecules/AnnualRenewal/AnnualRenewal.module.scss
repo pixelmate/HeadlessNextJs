@@ -1,0 +1,10 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.annualRenewalContainer {
+  @include toRem('padding', 10 30);
+  .errors {
+    color: $red;
+    @include toRem('font-size', 14);
+  }
+}

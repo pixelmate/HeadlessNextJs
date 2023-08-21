@@ -1,0 +1,30 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.genericPlaceholder {
+  text-align: center;
+  @include toRem('padding', 0 15);
+  @include respond-to('desktop') {
+    @include toRem('padding-top', 10);
+    @include toRem('padding-bottom', 10);
+  }
+  &_title {
+    @include toRem('font-size', 50);
+    @include toRem('line-height', 60);
+    @include toRem('padding-bottom', 10);
+    @include respond-to('desktop') {
+      @include toRem('font-size', 80);
+    }
+  }
+  &_subTitle {
+    @include toRem('font-size', 30);
+    @include toRem('margin-bottom', 30);
+    @include respond-to('desktop') {
+      @include toRem('margin-bottom', 60);
+    }
+  }
+  &_description {
+    text-align: justify;
+    @include toRem('line-height', 40);
+  }
+}

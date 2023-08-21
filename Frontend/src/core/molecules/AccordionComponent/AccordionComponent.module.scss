@@ -1,0 +1,44 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.accordioncontainer {
+  &_title {
+    font-weight: 200;
+    color: $accordiontitle;
+    @include toRem('margin-top', 20);
+    @include toRem('font-size', 32);
+    @include toRem('line-height', 40);
+    @include respond-to('desktop') {
+      @include toRem('font-size', 36);
+      @include toRem('line-height', 48);
+    }
+  }
+  &_wrapper {
+    @include toRem('margin-top', 5);
+  }
+  &_item {
+    border-radius: 4px;
+    @include toRem('margin-top', 5);
+  }
+  &_header {
+    button {
+      &::after {
+        display: none;
+      }
+      &:hover {
+        color: $tabdarkorange;
+      }
+      &:focus {
+        box-shadow: none;
+        z-index: 0;
+      }
+      color: $charcoal;
+      background-color: $lightgray;
+      border-color: $grey;
+      font-weight: 500;
+      font-family: 'omnes-pro', sans-serif;
+      @include toRem('font-size', 16);
+      @include toRem('padding', 10 15);
+    }
+  }
+}

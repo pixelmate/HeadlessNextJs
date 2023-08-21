@@ -1,0 +1,72 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.mediaGallery {
+  @include toRem('padding-bottom', 20);
+  padding-left: 0;
+  & .carousel {
+    z-index: 0;
+    background-color: $white;
+    @include toRem('height', 350);
+    @include respond-to('mobile-first') {
+      @include toRem('height', 470);
+    }
+    @include respond-to('large-desktop') {
+      height: 100%;
+    }
+    &_playerWrapper {
+      position: relative;
+      padding-top: 56.25%;
+      & .reactPlayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  & .playerWrapper {
+    position: relative;
+    padding-top: 56.25%;
+    cursor: pointer;
+    & .reactPlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+  & .thumbnailWrapper {
+    padding-left: 0;
+    @include toRem('margin-top', 20);
+    @include respond-to('large-desktop') {
+      margin-top: 0;
+    }
+    & .thumbnail {
+      @include toRem('max-width', 130);
+      @include toRem('max-height', 130);
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      border: 1px solid $grey;
+      cursor: pointer;
+      @include toRem('margin', 0 15 20 15);
+      &:hover {
+        background: linear-gradient(to bottom, $white 40%, $lightgreen 100%);
+      }
+      &_video {
+        height: auto;
+        width: 100%;
+        background-color: $white;
+        border: 1px solid $grey;
+        @include toRem('margin', 0 15 20 15);
+      }
+      @include respond-to('desktop') {
+        height: auto;
+      }
+      @include respond-to('large-desktop') {
+        max-width: unset;
+        max-height: unset;
+      }
+    }
+  }
+}

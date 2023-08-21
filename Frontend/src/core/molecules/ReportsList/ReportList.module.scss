@@ -1,0 +1,12 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.reportList{
+  &_title{
+    color: $darkseablue;
+  }
+  select{
+    margin: 0 auto;
+    @include toRem('width', 225);
+  }
+}

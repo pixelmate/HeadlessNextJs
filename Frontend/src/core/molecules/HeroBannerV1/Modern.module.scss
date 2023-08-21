@@ -1,0 +1,70 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.herobannerv1_modern {
+  .image_container {
+    @include respond-to('tab') {
+      position: relative;
+    }
+
+    img {
+      @include toRem('height', 400);
+      width: 100%;
+      object-fit: cover;
+
+      @include respond-to('tab') {
+        @include toRem('height', 300px);
+      }
+
+      @include respond-to('desktop') {
+        height: 100vh;
+      }
+    }
+
+    .title {
+      text-transform: uppercase;
+      @include toRem('letter-spacing', 8);
+      @include toRem('padding', 40 10);
+      margin-bottom: 0;
+      @include toRem('font-size', 20);
+      text-align: center;
+      font-weight: bold;
+
+      @include respond-to('tab') {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        margin: 0;
+        position: absolute;
+        @include toRem('letter-spacing', 8);
+        @include toRem('padding', 40 60);
+      }
+    }
+  }
+
+  .title_description_container {
+    @include toRem('padding-bottom', 100);
+
+    .herobanner_title {
+      @include toRem('padding-top', 100);
+      @include toRem('font-size', 50);
+      text-align: center;
+      @include toRem('line-height', 60);
+      @include respond-to('tab') {
+        @include toRem('font-size', 46);
+      }
+    }
+
+    .description {
+      @include toRem('margin-top', 40);
+      @include toRem('line-height', 40);
+      @include toRem('font-size', 16);
+
+      @include respond-to('tab') {
+        @include toRem('line-height', 45);
+        @include toRem('padding', 0 40);
+        @include toRem('margin-top', 80);
+      }
+    }
+  }
+}

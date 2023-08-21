@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "lib/*": ["src/lib/*"],
+      "temp/*": ["src/temp/*"],
+      "assets/*": ["src/assets/*"],
+      "core/*": ["src/core/*"],
+      "utils/*": ["src/utils/*"],
+      "data/*": ["src/data/*"],
+      "hooks/*": ["src/hooks/*"],
+      "pages/*": ["src/pages/*"],
+      "config/*": ["src/config/*"],
+      "types": ["node"],
+      "services/*": ["src/services/*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "incremental": true,
+    "typeRoots": ["src/global.d.ts", "node_modules/@types"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+

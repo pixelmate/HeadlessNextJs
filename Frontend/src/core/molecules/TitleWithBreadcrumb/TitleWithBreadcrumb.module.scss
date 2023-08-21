@@ -1,0 +1,62 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.title {
+  font-weight: 500;
+  &.classic {
+    @include respond-to('desktop') {
+      font-weight: 200;
+      @include toRem('line-height', 48);
+      @include toRem('margin', 20 0 10);
+    }
+  }
+}
+.breadcrumb {
+  padding: 0;
+  @include toRem('margin-bottom', 18);
+  @include toRem('font-size', 12);
+  @include respond-to('desktop') {
+    @include toRem('font-size', 16);
+  }
+  &_link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $darkgray;
+    &:not(:last-child) {
+      &::after {
+        content: '/';
+        @include toRem('padding', 0 10);
+      }
+    }
+    &:last-child {
+      color: inherit;
+      pointer-events: none;
+      &::before {
+        @include toRem('padding', 0 1);
+      }
+    }
+  }
+  &.classic {
+    a {
+      text-transform: inherit;
+      text-decoration: none;
+      color: $captchaLinks;
+      @include toRem('margin-right', 5);
+      &:hover {
+        color: $black;
+      }
+      &::after {
+        content: '/';
+      }
+      &:last-child {
+        color: inherit;
+        pointer-events: none;
+        &::before {
+          @include toRem('padding', 0 1);
+        }
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

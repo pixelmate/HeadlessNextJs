@@ -1,0 +1,29 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.banner {
+    padding-top: 7%;
+  .button {
+    font-weight: bold;
+    border-radius: 0.25rem;
+    @include toRem('line-height', 16);
+    @include toRem('padding', 8 40);
+    @include toRem('letter-spacing', 1);
+    @include toRem('font-size', 16);
+  }
+  .image {
+    object-fit: cover;
+    width: 100%;
+    @include toRem('height',140);
+    @include respond-to('desktop') {
+      height: auto;
+    }
+  }
+  h3 {
+    font-weight: 400;
+    @include toRem('font-size', 36);
+    @include respond-to('tab') {
+      @include toRem('font-size', 34);
+    }
+  }
+}

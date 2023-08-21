@@ -1,0 +1,96 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.contactUsCommonStyling {
+  color: $white;
+  text-shadow: $black 2px 2px 2px;
+  text-align: center;
+}
+
+.contactUs {
+  @include toRem('padding', 0 0 50 0);
+  @include respond-to('tab') {
+    @include toRem('padding', 50 0 100 0);
+  }
+  @include respond-to('desktop') {
+    @include toRem('padding', 0 0 100 0);
+  }
+  &_heading {
+    @extend .contactUsCommonStyling;
+    h1 {
+      font-weight: 600;
+      @include toRem('font-size', 24);
+      @include toRem('line-height', 22);
+      @include toRem('padding', 30 0);
+      @include respond-to('desktop') {
+        font-weight: 700;
+        @include toRem('font-size', 46);
+        @include toRem('line-height', 75);
+      }
+    }
+    a {
+      font-weight: 600;
+      text-decoration: none;
+      color: $white;
+      @include toRem('font-size', 16);
+      @include respond-to('tab') {
+        font-weight: 500;
+        @include toRem('font-size', 22);
+      }
+    }
+  }
+
+  &_contactUsFormWrapper {
+    background-color: rgba($contactformbg, 0.8);
+    box-shadow: 0 0 5px rgba($black, 0.5);
+    @include toRem('padding', 25);
+    @include toRem('font-size', 14);
+    @include toRem('border-radius', 5);
+    @include toRem('margin', 50 0 10 0);
+    input,
+    textarea {
+      @include toRem('font-size', 14);
+    }
+  }
+  &_recaptchaInfo {
+    color: $captchaInfo;
+    text-align: center;
+    @include toRem('font-size', 12);
+    @include toRem('margin-bottom', 40);
+    & a {
+      color: $captchaLinks;
+      text-decoration: none;
+    }
+  }
+  &_customerService {
+    font-weight: 500;
+    @extend .contactUsCommonStyling;
+    @include toRem('font-size', 16);
+    @include respond-to('desktop') {
+      @include toRem('font-size', 20);
+    }
+  }
+  &_submitStatusMessage {
+    background-color: $white;
+    @include toRem('padding', 25);
+    @include toRem('border-radius', 5);
+  }
+  &_errors {
+    color: $red;
+  }
+  &_submitBtn {
+    @include toRem('font-size', 16);
+  }
+}
+
+.image_container {
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+
+  & .background {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+}

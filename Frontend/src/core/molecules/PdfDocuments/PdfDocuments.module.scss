@@ -1,0 +1,19 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+
+.pdfDocuments{
+  @include toRem('padding', 20);
+  ul{
+    li{
+      cursor: pointer;
+      color: $link;
+      @include toRem('font-size', 14);
+      img{
+        max-width: 100%;
+        object-fit: contain;
+        @include toRem('margin-right', 10);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.totalPrice {
+  font-weight: 500;
+  @include toRem('padding', 8 20);
+  & span {
+    text-align: end;
+    flex-grow: 2;
+  }
+}
+.autoshipPrice {
+  background-color: $oceanblue;
+  color: $white;
+  @include toRem('border-radius', 4);
+  @include toRem('padding', 8 20);
+  & span {
+    text-align: end;
+    flex-grow: 2;
+  }
+}

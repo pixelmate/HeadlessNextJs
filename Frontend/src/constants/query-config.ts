@@ -1,0 +1,17 @@
+export const STALE_TIME_DEFAULT = 30 * 1000; // 30 seconds
+export const STALE_TIME_LONG = 5 * 60 * 1000; // 5 minutes
+export const MESSAGE_CHARACTER_COUNT = 300;
+export const CALLBACK_URL = 'callbackUrl';
+export const REFERRER_URL = 'referrer';
+export const NAME_MAXLENGTH = 25;
+export const EMAIL_MAXLENGTH = 50;
+export const PHONE_MAXLENGTH = 15;
+export const FIELDREP_NAME_MAXLENGTH = 35;
+export const COMPANY_NAME_MAXLENGTH = 25;
+export const CITY_MAXLENGTH = 25;
+export const ZIPCODE_MAXLENGTH = 10;
+export const PHONE_PREFIX_AREACODE_MAXLENGTH = 3;
+export const PHONE_LINENUMBER_MAXLENGTH = 4;
+export const PHONE_EXT_MAXLENGTH = 10;
+export const BILLING_ADDRESS_FIELDS_MAXLENGTH = 25;
+export const BILLING_ADDRESS_ZIPCODE_MAXLENGTH = 10;

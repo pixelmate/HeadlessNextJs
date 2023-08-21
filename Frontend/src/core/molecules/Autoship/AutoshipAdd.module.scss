@@ -1,0 +1,26 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.autoship {
+  select {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: $white;
+    display: block;
+    background-color: $darkoceanblue;
+    @include toRem('padding', 7.5);
+    @include toRem('margin', 10 0);
+    @include toRem('border-radius', 4);
+  }
+  .text_info {
+    color: $darkoceanblue;
+  }
+  .check_mark {
+    @include toRem('margin', 3 8 auto 0);
+    @include toRem('width', 20);
+    @include toRem('height', 20);
+    @include toRem('min-width', 20);
+    @include toRem('min-height', 20);
+  }
+}

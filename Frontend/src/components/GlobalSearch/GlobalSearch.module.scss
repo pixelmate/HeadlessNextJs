@@ -1,0 +1,28 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.searchItem {
+  word-wrap: break-word;
+  a {
+    text-decoration: none;
+    color: $globalsearchcolor;
+    @include toRem('font-size', 16);
+    em {
+      font-style: normal;
+    }
+    &:hover {
+      color: $black;
+    }
+  }
+  &_abstract {
+    @include toRem('font-size', 13);
+    em {
+      background-color: $globalsearchhighlightbg;
+      font-weight: bolder;
+      font-style: normal;
+    }
+  }
+  &_url {
+    color: $globalsearchurlcolor;
+    @include toRem('font-size', 13);
+  }
+}

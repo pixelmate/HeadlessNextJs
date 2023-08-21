@@ -1,0 +1,33 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/_mixins';
+
+.address_selection_control_modal {
+  .header_title {
+    @include toRem('font-size', 18);
+  }
+  .message {
+    @include toRem('font-size', 15);
+  }
+  .modal_width {
+    @include toRem('max-width', 600);
+    @include respond-to('tab') {
+      @include toRem('width', 600);
+    }
+  }
+  .checkbox_wrapper {
+    @include toRem('width', 44);
+    @include toRem('min-width', 13);
+    @include toRem('min-height', 13);
+  }
+  .checkbox_label,
+  .error_message {
+    @include toRem('font-size', 14);
+  }
+  .skip_button {
+    border-color: $darkwhite;
+    &:hover {
+      border-color: $darkwhite;
+      background-color: $palegray;
+    }
+  }
+}

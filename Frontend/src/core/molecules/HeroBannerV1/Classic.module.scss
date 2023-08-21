@@ -1,0 +1,69 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.herobannerv1_classic {
+  .image_container {
+    @include toRem('padding', 0 15);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      @include respond-to('tab') {
+        @include toRem('height', 320);
+      }
+
+      @include respond-to('desktop') {
+        @include toRem('height', 440);
+      }
+    }
+  }
+
+  .title_description_container {
+    @include toRem('padding-bottom', 40);
+
+    .container {
+      position: relative;
+
+      @include respond-to('tab') {
+        @include toRem('padding', 0 15);
+      }
+
+      .title {
+        position: absolute;
+        @include toRem('font-size', 20);
+        @include toRem('height', 50);
+        @include toRem('width', 300);
+        @include toRem('line-height', 24);
+        @include toRem('letter-spacing', 2.2);
+        @include toRem('margin-top', 23);
+        @include toRem('padding', 20);
+        text-transform: uppercase;
+        text-align: center;
+        @include toRem(top, -71);
+        left: 50%;
+        transform: translateX(-50%);
+        @include toRem('border-radius', 10 10 0 0);
+
+        @include respond-to('tab') {
+          @include toRem('width', 468);
+          @include toRem('letter-spacing', 4.8);
+          @include toRem('padding', 22 16 0 16);
+          @include toRem('height', 72);
+          @include toRem('font-size', 30);
+          @include toRem('line-height', 36);
+        }
+      }
+
+      .description {
+        @include toRem('margin-bottom', 16);
+        @include toRem('padding-top', 20);
+        @include toRem('font-size', 18);
+        text-align: center;
+        @include respond-to('tab') {
+          @include toRem('padding-top', 40);
+        }
+      }
+    }
+  }
+}

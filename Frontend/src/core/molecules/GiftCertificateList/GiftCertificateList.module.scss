@@ -1,0 +1,17 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.dataHeader {
+  @include toRem('font-size', 14);
+  font-weight: bold;
+}
+.dataRow {
+  @include toRem('padding', 10 0);
+  @include toRem('font-size', 14);
+  &:nth-child(odd) {
+    background-color: $mediumgray;
+  }
+}
+.sendBtn {
+  @include toRem('font-size', 14);
+}

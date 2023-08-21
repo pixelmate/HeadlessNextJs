@@ -1,0 +1,42 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.blogListing {
+  columns: 1;
+  @include toRem('column-gap', 20);
+  @include respond-to('tab-pro') {
+    columns: 2;
+  }
+  @include respond-to('extra-large-desktop') {
+    columns: 3;
+  }
+  &_columns {
+    overflow: hidden;
+    break-inside: avoid;
+    @include toRem('border-bottom-left-radius', 5);
+    @include toRem('border-bottom-right-radius', 5);
+  }
+  &_wrapper {
+    display: flex;
+    background: $white;
+    text-decoration: none;
+    flex-direction: column;
+  }
+  &_content {
+    color: $mediumdarkgrey;
+    @include toRem('padding', 0 15);
+    @include toRem('font-size', 16);
+    @include toRem('margin-top', 15);
+  }
+  &_image {
+    width: 100%;
+    height: auto;
+  }
+  &_heading {
+    color: $charcoal;
+    font-weight: bold;
+    @include toRem('font-size', 22);
+    @include toRem('line-height', 26);
+    @include toRem('margin-bottom', 10);
+  }
+}

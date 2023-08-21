@@ -1,0 +1,22 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  .content {
+    text-align: center;
+    flex-wrap: wrap;
+    @include respond-to('tab') {
+      text-align: start;
+      flex-wrap: nowrap;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .imgWrapper {
+      margin: auto;
+      @include toRem('width', 50);
+    }
+  }
+}

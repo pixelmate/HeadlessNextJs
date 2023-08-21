@@ -1,0 +1,50 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.curatedProductlist_modern {
+  background: $pearl;
+  cursor: pointer;
+  &_title {
+    text-align: center;
+    color: $wood;
+    @include toRem('margin-bottom', 20);
+  }
+  &_card {
+    @include toRem('margin', 60 0);
+    &_wrapper {
+      @include respond-to('desktop') {
+        @include toRem('margin-bottom', 30);
+      }
+    }
+    &_section {
+      text-align: center;
+      height: 100%;
+      @include toRem('padding', 20 60);
+      @include respond-to('desktop') {
+        @include toRem('padding', 20 25);
+      }
+    }
+    &_title {
+      @include toRem('margin-bottom', 40);
+    }
+    &_description {
+      @include toRem('margin-bottom', 16);
+    }
+    &_img {
+      @include toRem('margin', 20 0);
+      img {
+        @include toRem('margin-top', -100);
+      }
+    }
+  }
+  &_cta {
+    color: $productCtaLink;
+    @include toRem('font-size', 18);
+    @include respond-to('desktop') {
+      font-size: unset;
+    }
+    &:hover {
+      color: $productCtaLink;
+    }
+  }
+}

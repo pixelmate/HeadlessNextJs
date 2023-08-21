@@ -1,0 +1,85 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.herov1Container {
+  @include toRem('height', auto);
+  @include respond-to('tab') {
+    @include toRem('min-height', 1200);
+  }
+  @include respond-to('desktop') {
+    @include toRem('min-height', 900);
+  }
+  @include respond-to('large-desktop') {
+    @include toRem('min-height', 1100);
+  }
+}
+.herobannerv1_standard {
+  position: relative;
+  @include respond-to('tab') {
+    height: auto;
+    width: 100%;
+  }
+  .image_container {
+    height: auto;
+    @include respond-to('desktop') {
+      position: relative;
+    }
+
+    & .image_hero {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      @include toRem('height', 400);
+      @include respond-to('tab') {
+        @include toRem('height', 1200);
+      }
+      @include respond-to('desktop') {
+        @include toRem('height', 900);
+      }
+      @include respond-to('large-desktop') {
+        @include toRem('height', 1100);
+      }
+    }
+  }
+  .placeholder {
+    @include toRem('padding', 0);
+    @include respond-to('tab') {
+      @include toRem('margin-top', -1200);
+    }
+    @include respond-to('desktop') {
+      @include toRem('margin-top', -900);
+    }
+    @include respond-to('large-desktop') {
+      @include toRem('margin-top', -1100);
+    }
+  }
+
+  &_title {
+    @include respond-to('tab') {
+      display: flex;
+      width: 100%;
+      @include toRem('height', 500);
+      @include toRem('padding', 50 0);
+      @include respond-to('desktop') {
+        @include toRem('padding', 75 0);
+      }
+    }
+    h1 {
+      width: 100%;
+      text-align: center;
+      @include toRem('font-size', 38);
+      @include toRem('padding', 40 15);
+      @include respond-to('tab') {
+        @include toRem('font-size', 46);
+        background: transparent;
+        display: flex;
+        text-align: left;
+        @include toRem('padding', 0);
+        @include toRem('width', 400);
+      }
+      @include respond-to('desktop') {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.media {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  @include toRem('max-width', 400);
+
+  @include respond-to('desktop') {
+    margin-right: 0;
+  }
+
+  input[type='email'] {
+    @include toRem('min-height', 35);
+    @include toRem('font-size', 13);
+    @include toRem('border', 0);
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  &_signUpButton {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    @include toRem('margin-top', 2);
+    @include toRem('padding-top', 7);
+    @include toRem('padding-bottom', 11);
+  }
+}
+
+.signUpForm {
+  @include toRem('margin-top', 50);
+}
+
+.signUpText {
+  @include toRem('font-size', 14);
+}

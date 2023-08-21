@@ -1,0 +1,25 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.blogPagination {
+  background-color: $grey;
+  @include toRem('margin',0 0 20 0);
+  .pageLinkContainer {
+    padding: 0;
+    background-color: $white;
+    @include toRem('margin', 1);
+    @include toRem('font-size', 14);
+    &:hover {
+      background-color: darken($white, 2%);
+    }
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: $darkoceanblue;
+    @include toRem('padding', 20 10);
+    &:hover {
+      color: $lightoceanblue;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+@mixin layoutStyling() {
+  display: flex;
+}
+
+.image_container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  & .background {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.InformationRequestForm {
+  background-color: rgba($contactformbg, 0.8);
+  box-shadow: 0 0 5px rgba($black, 0.5);
+  @include toRem('padding', 25);
+  @include toRem('font-size', 14);
+  @include toRem('border-radius', 5);
+  @include toRem('margin', 50 0 100 0);
+  &_fieldRepInformation {
+    @include toRem('font-size', 14);
+    @include toRem('margin', 20 0);
+  }
+  &_fieldsWrapper {
+    flex-direction: column;
+    @include layoutStyling();
+  }
+  &_formField {
+    @include toRem('font-size', 11);
+    @include toRem('margin-bottom', 10);
+    @include respond-to('tab') {
+      width: 80%;
+      display: flex;
+      align-items: baseline;
+      @include toRem('margin-bottom', 15);
+    }
+  }
+  &_fieldLabel {
+    @include toRem('margin', 0 0 5);
+    @include respond-to('tab') {
+      text-align: right;
+      @include toRem('width', 300);
+      @include toRem('margin', 0 40 20 0);
+    }
+  }
+  &_buttonWrapper {
+    @include respond-to('tab') {
+      width: 80%;
+    }
+  }
+}

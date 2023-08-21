@@ -1,0 +1,50 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.placeholder {  
+  &_box {
+    background: $grey;
+    @include toRem('height', 175);
+  }
+  &_bars {
+    @include toRem('height', 85);
+  }
+  &_bar {
+    background: $grey;
+    @include toRem('height', 20);
+    @include toRem('margin', 15 0);
+    &_1{
+      width: 80%;
+      @include toRem('margin-top', 15);
+      }
+      &_2{
+        width: 40%;
+      }
+    }
+}
+
+.loading {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    display: block;
+    background: $darkwhite;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    animation: 1.5s loading-placeholder ease-in-out infinite;
+  }
+}
+
+@keyframes loading-placeholder {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

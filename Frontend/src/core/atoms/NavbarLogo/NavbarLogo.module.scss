@@ -1,0 +1,17 @@
+@import 'styles/sass/abstracts/mixins';
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    @include toRem('height', 33);
+    width: auto;
+
+    @include respond-to('large-desktop') {
+      @include toRem('width', 248);
+      object-fit: contain;
+    }
+  }
+}
+

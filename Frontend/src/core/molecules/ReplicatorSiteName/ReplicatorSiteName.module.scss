@@ -1,0 +1,31 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.replicatorSiteNameContainer {
+  @include toRem('padding', 10 30);
+
+  .errors {
+    color: $red;
+    @include toRem('font-size', 14);
+  }
+
+  .inputField {
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+  }
+
+  @include respond-to('all-mobile') {
+    .prefix {
+      width: 100%;
+      border-top-right-radius: 6px !important;
+      border-bottom-left-radius: 0 !important;
+      align-items: center;
+      justify-content: center;
+    }
+    .inputField {
+      border-top-right-radius: 0 !important;
+      border-bottom-left-radius: 6px !important;
+      margin: 0 !important;
+    }
+  }
+}

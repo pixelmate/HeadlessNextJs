@@ -1,0 +1,69 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.footer {
+  background-color: $black;
+  color: $white;
+  @include toRem('padding', 70 0 40);
+
+  @include respond-to('desktop') {
+    @include toRem('padding', 70 0 95);
+  }
+
+  &_container {
+    @include toRem('padding-left', 30);
+    @include toRem('padding-right', 30);
+
+    @include respond-to('tab') {
+      padding-right: calc(var(--bs-gutter-x) * 0.5);
+      padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }
+  }
+
+  &_socialLinks {
+    margin-right: auto;
+    @include toRem('margin-bottom', 20);
+
+    @include respond-to('desktop') {
+      @include toRem('margin-bottom', 130);
+    }
+  }
+
+  &_socialLink {
+    @include toRem('margin-right', 12);
+  }
+
+  &_trustpilot {
+    transform: scale(0.75);
+    transform-origin: 0 50%;
+  }
+
+  &_media {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    @include toRem('max-width', 400);
+
+    @include respond-to('desktop') {
+      margin-right: 0;
+    }
+  }
+
+
+  
+  &_trustBadge {
+    display: inline-block;
+    @include toRem('margin', 0 10 10 0);
+  }
+
+  ul {
+    @include toRem('font-size', 18);
+
+    li {
+      a:hover {
+        color: $steelblue;
+      }
+    }
+  }
+}

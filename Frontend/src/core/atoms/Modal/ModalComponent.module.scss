@@ -1,0 +1,55 @@
+@import 'styles/sass/abstracts/mixins';
+
+.modalContainer {
+  > div {
+    padding: 4% 0;
+    @include toRem('margin', 30 auto);
+    > div {
+      background-color: transparent;
+      border: none;
+      align-items: center;
+    }
+  }
+  .modalBody {
+    @include toRem('padding', 0);
+  }
+  .modalHeader {
+    border: none;
+    @include toRem('padding-right', 0);
+    @include toRem('max-height', 50);
+    button {
+      opacity: 1;
+      &:hover {
+        filter: initial;
+      }
+    }
+  }
+  .video,
+  .modalHeader {
+    height: auto;
+    @include toRem('min-width', 296);
+    @include respond-to('tab') {
+      @include toRem('width', 500);
+      @include toRem('height', 360);
+    }
+    @include respond-to('desktop') {
+      @include toRem('width', 640);
+    }
+  }
+}
+.modalCta {
+  > div {
+    padding: 15% 0 0;
+    width: 93%;
+    margin: auto;
+  }
+}
+
+.modalButton {
+  width: 100%;
+  @include toRem('margin', 10 0);
+  @include respond-to('tab') {
+    width: auto;
+    @include toRem('margin', 0 10);
+  }
+}

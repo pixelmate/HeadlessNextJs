@@ -1,0 +1,108 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.productListingGrid {
+  &_button{
+    @include toRem('min-width', 150);
+  }
+  table {
+    display: block;
+    border: 1px solid $darkwhite;
+    @include respond-to('tab') {
+      display: table;
+    }
+    thead {
+      display: none;
+      @include respond-to('tab') {
+        display: table-header-group;
+      }
+    }
+    tr {
+      display: block;
+      border: 1px solid $darkwhite;
+      @include respond-to('tab') {
+        display: table-row;
+      }
+    }
+    th {
+      display: none;
+      @include respond-to('tab') {
+        font-weight: 400;
+        display: table-cell;
+        background-color: $tableHeaderBg;
+        @include toRem('padding', 3 10);
+        @include toRem('font-size', 14);
+      }
+    }
+    td {
+      display: block;
+      background-color: $tableDataBg;
+      border-bottom-color: $darkwhite;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal;
+      text-align: left;
+      @include respond-to('tab') {
+        display: table-cell;
+        @include toRem('padding', 10);
+      }
+      &::before {
+        content: attr(data-title);
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        position: absolute;
+        white-space: nowrap;
+        @include toRem('top', 10);
+        @include toRem('left', 15);
+        @include toRem('font-size', 14);
+        @include toRem('padding-right', 10);
+        @include respond-to('tab') {
+          display: none;
+        }
+      }
+      .warning_icon {
+        @include toRem('left', -25);
+      }
+    }
+    tbody {
+      display: block;
+      @include respond-to('tab') {
+        display: table-row-group;
+      }
+    }
+    input {
+      color: $darkgrey;
+      text-align: center;
+      border: 1px solid $darkwhite;
+      @include toRem('width', 50);
+      @include toRem('font-size', 14);
+      @include toRem('line-height', 1.4);
+      @include toRem('padding', 5);
+      @include toRem('border-radius', 4);
+    }
+    img {
+      @include toRem('height', 100);
+      @include toRem('width', 100);
+      object-fit: contain;
+    }
+  }
+  &_empty_cart_message {
+    background-color: $tableDataBg;
+    border: 1px solid $darkwhite;
+    @include toRem('padding', 80);
+    @include toRem('margin-bottom', 40);
+  }
+  &_link {
+    color: $globalsearchcolor;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $black;
+    }
+  }
+  .pointer {
+    cursor: pointer;
+  }
+}

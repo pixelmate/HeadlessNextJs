@@ -1,0 +1,23 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.productDetail {
+  @include toRem('margin-top', 20);
+  @include toRem('font-size', 18);
+  @include respond-to('desktop') {
+    @include toRem('margin-top', 80);
+  }
+  &_content {
+    border: 1px solid $darkwhite;
+    height: fit-content;
+    @include toRem('margin', 0 15);
+    @include toRem('border-radius', 4);
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      appearance: none;
+    }
+    background: $white;
+    @include toRem('font-size', 16);
+    @include toRem('padding', 15 15 40 15);
+  }
+}

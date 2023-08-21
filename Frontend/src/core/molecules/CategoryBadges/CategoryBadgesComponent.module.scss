@@ -1,0 +1,20 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.badgeContainer {
+  @include toRem('margin', 100 0);
+  &_badges {
+    &_img {
+      @include toRem('width', 40);
+      @include toRem('height', 42);
+    }
+    &_text {
+      font-weight: 400;
+      @include toRem('margin-top', 15);
+      @include toRem('font-size', 14);
+      @include toRem('letter-spacing', 1);
+      @include respond-to('tab') {
+        @include toRem('letter-spacing', 3);
+      }
+    }
+  }
+}

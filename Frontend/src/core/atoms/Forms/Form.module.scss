@@ -1,0 +1,31 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.label {
+  color: $charcoal;
+  @include toRem('font-size', 14);
+  @include toRem('line-height', 20);
+  @include toRem('margin', 0 35 2 0);
+}
+.textfield {
+  border: 1px solid $darkwhite;
+  @include toRem('font-size', 14);
+  @include toRem('height', 35);
+}
+.textArea {
+  border: 1px solid $darkwhite;
+  @include toRem('font-size', 14);
+  @include toRem('height', 200);
+}
+.charactersLeft {
+  @include toRem('font-size', 14);
+}
+.selectDropdown {
+  border: 1px solid $darkwhite;
+  @include toRem('padding', 6);
+  @include toRem('font-size', 14);
+}
+.errors {
+  color: $red;
+  @include toRem('font-size', 14);
+}

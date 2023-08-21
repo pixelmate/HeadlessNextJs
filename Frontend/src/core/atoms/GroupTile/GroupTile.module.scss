@@ -1,0 +1,23 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.groupTile{
+  &_heading{
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    background: $lightgray;
+    @include toRem('padding', 0 10);
+  }
+  &_link{
+    font-weight: 100;
+    text-decoration: none;
+    color: $globalsearchcolor;
+    @include toRem('padding', 0 5);
+    @include toRem('font-size', 14);
+    transition: all 0.3s ease-in-out;
+    &:hover, &:active{
+      color: $black;
+    }
+  }
+}

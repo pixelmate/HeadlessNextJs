@@ -1,0 +1,29 @@
+@import 'styles/sass/abstracts/mixins';
+
+@include respond-to('tab') {
+  .alert {
+    padding: 0;
+  }
+}
+.formItemLabel {
+  @include respond-to('tab') {
+    @include toRem('padding', 0);
+    text-align: end;
+  }
+  @include respond-to('all-mobile') {
+    @include toRem('padding', 0 0 0 12);
+    width: 100%;
+  }
+}
+@include respond-to('all-mobile') {
+  .formItem {
+    width: 100%;
+
+    &Phone {
+      width: 75%;
+      &Ext {
+        width: 25%;
+      }
+    }
+  }
+}

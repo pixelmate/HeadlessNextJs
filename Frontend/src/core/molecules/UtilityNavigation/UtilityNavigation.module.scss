@@ -1,0 +1,116 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.navbar_flex {
+  display: flex;
+  justify-content: flex-end;
+  color: $darkgray;
+  @include toRem('width', 200);
+
+  @include respond-to('desktop') {
+    justify-content: unset;
+    @include toRem('width', 275);
+  }
+  ul {
+    @include toRem('margin', 0);
+    @include toRem('padding', 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    @include respond-to('desktop') {
+      justify-content: space-between;
+    }
+    li {
+      list-style: none;
+      cursor: pointer;
+      &:not(:last-child) {
+        @include toRem('margin-right', 15);
+        @include respond-to('desktop') {
+          @include toRem('margin-right', 0);
+        }
+      }
+      &:hover {
+        color: $darkyellow;
+      }
+
+      &.basket {
+        position: relative;
+        .count {
+          position: absolute;
+          display: flex;
+          font-weight: bold;
+          background-color: $oceanblue;
+          align-items: center;
+          justify-content: center;
+          color: $white;
+          cursor: pointer;
+          @include toRem('font-size', 14);
+          @include toRem('border-radius', 40);
+          @include toRem('width', 20);
+          @include toRem('top', -5);
+          @include toRem('right', -5);
+          @include toRem('height', 20);
+        }
+      }
+      .search {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+      .login_btn {
+        background: $lightgray;
+        text-transform: uppercase;
+        color: $black;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        @include toRem('border-radius', 3);
+        @include toRem('font-size', 14);
+        @include toRem('padding', 5 10);
+        @include toRem('line-height', 24);
+        &:hover {
+          color: $darkyellow;
+        }
+      }
+
+      &.hamburger_menu {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        cursor: pointer;
+        @include toRem('margin', 0 -10 0 5);
+        @include toRem('height', 25);
+        @include toRem('width', 45);
+        .bar_top,
+        .bar_middle,
+        .bar_bottom {
+          width: 70%;
+          background: $darkgray;
+          transform-origin: left;
+          transition: all 0.3s ease-in-out;
+          @include toRem('height', 3);
+          @include toRem('border-radius', 3);
+        }
+        &.active {
+          .bar_top {
+            transform: rotate(45deg);
+          }
+          .bar_middle {
+            opacity: 0;
+          }
+          .bar_bottom {
+            transform: rotate(-45deg);
+          }
+          color: $darkgray;
+        }
+      }
+    }
+  }
+}

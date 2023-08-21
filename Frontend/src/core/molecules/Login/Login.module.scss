@@ -1,0 +1,16 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.login {
+  &_heading {
+    text-align: center;
+    @include toRem('margin', 0);
+    @include toRem('padding', 70 0 10);
+  }
+}
+
+.formlink {
+  color: $loginlinkcolor;
+  text-decoration: none;
+  @include toRem('font-size', 14);
+}

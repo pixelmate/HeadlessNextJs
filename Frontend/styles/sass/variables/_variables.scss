@@ -1,0 +1,165 @@
+/*Colors Palette - DO NOT MODIFY*/
+$black: #000000;
+$superlightgray: #f0f0f0;
+$darkgray: #666666;
+$charcoal: #333333;
+$lightgray: #f5f5f5;
+$palegray: #eeeeee;
+$mediumgray: #d3d3d3;
+$white: #ffffff;
+$lightorange: #f99f1c;
+$yellow: #fff223;
+$lightpink: #fff8ed;
+$orange: #f8991d;
+$palegreen: #98cb33;
+$lightgreen: #d5f478;
+$violet: #2d1a22;
+$watermelon: #ff6a73;
+$crimson: #f9b2c4;
+$sealbrown: #884f04;
+$oceanblue: #05d7d7;
+$steelblue: #33b1be;
+$seaserpent: #48c2c9;
+$forestgreen: #228b22;
+$darkyellow: #ffbb00;
+$grey: #dddddd;
+$darkgrey: #555555;
+$mediumdarkgrey: #444444;
+$palebrown: #b7aa98;
+$darkorange: #e0891a;
+$seablue: #03a6a6;
+$seagreen: #4bac28;
+$shadowblack: #00000080;
+$lightwhite: #ffffffe6;
+$red: #ff0000;
+$pearl: #fcecd4;
+$wood: #791d00;
+$lightblue: #f2f8f9;
+$green: #53b300;
+$cyan: #00b394;
+$lilac: #7c6dac;
+$lightoceanblue: #00ffff;
+$darkoceanblue: #05d8d8;
+$darkwhite: #cccccc;
+$darkseablue: #31718f;
+$darkcyan: #04c1c1;
+$darkercyan: #008d96;
+$lightdashblue: #d9edf7;
+$blue: #31708f;
+/*Global Search*/
+$globalsearchbg: #ccd7ec;
+$globalsearchhighlightbg: #ffff00;
+$globalsearchborder: #95a9d3;
+$globalsearchcolor: #008d96;
+$globalsearchurlcolor: #008000;
+/*Social Share*/
+$facebook: #3b5998;
+$twitter: #00aced;
+// Tabs Component
+$tabgray: #808080;
+$tablightwhite: #efefec;
+$tablightgray: #d3d3d3;
+$tabdarkgray: #555;
+$tabdarkorange: #ffa500;
+$offwhite: #dee2e6;
+$greywhite: #ffffff99;
+$greentabicon: #80bc00;
+/*Button Palette*/
+$warning: #ff9900;
+$error: #962300;
+$success: #62e034;
+$addtobag: #f26822;
+/*Contact Us*/
+$contactformbg: #c3c3c3;
+$captchaInfo: #999999;
+$captchaLinks: #008d96;
+/*Login*/
+$loginfieldborder: #ced4da;
+$loginlinkcolor: #008d96;
+//Accordion
+$accordiontitle: #363333;
+// Product list
+$productCtaLink: #185d72;
+$productTileBackground: #fffbf6;
+$productTileText: #231f20;
+// Panel
+$panelBorder: #bce8f1;
+$panelHeadingBg: #d9edf7;
+$panelHeadingColor: #31708f;
+//LA Color Palette
+$green: #1fcf2b;
+// PDF documents
+$link: #1cbac8;
+//ProductListingGrid
+$tableDataBg: #0000000d;
+$tableHeaderBg: #dedede;
+$snow: #fffbf6;
+$spinnerblack: #0003;
+$whitesmoke: #f1f1f199;
+$lightGray: #d3d3d399;
+$speechGreen: #014205;
+$cuttySark: #608262;
+$seaBlue: #08630e;
+$blackRussian: #0d4d11;
+// Color paletes - Panel
+$laurelgreen: #d6e9c6;
+$pastelmint: #3c763d;
+$fizzbrown: #faebcc;
+$potterclay: #8a6d3b;
+$internationalorange: #ef5000;
+// Delivery options
+$tuna: #495057;
+$linkWater: #ced4da;
+$pantone: #008d96;
+// Banner paletes
+$gunmetal: #292f32;
+
+$color-map: (
+  //create a array to support the two colors light and dark
+  black: $black,
+  darkgray: $darkgray,
+  palegray: $palegray,
+  charcoal: $charcoal,
+  lightgray: $lightgray,
+  white: $white,
+  lightorange: $lightorange,
+  yellow: $yellow,
+  lightpink: $lightpink,
+  lightgreen: $lightgreen,
+  orange: $orange,
+  palegreen: $palegreen,
+  violet: $violet,
+  watermelon: $watermelon,
+  crimson: $crimson,
+  sealbrown: $sealbrown,
+  oceanblue: $oceanblue,
+  steelblue: $steelblue,
+  darkyellow: $darkyellow,
+  forestgreen: $forestgreen,
+  grey: $grey,
+  mediumdarkgrey: $mediumdarkgrey,
+  darkorange: $darkorange,
+  seablue: $seablue,
+  seagreen: $seagreen,
+  shadowblack: $shadowblack,
+  lightwhite: $lightwhite,
+  pearl: $pearl,
+  wood: $wood,
+  lightblue: $lightblue,
+  green: $green,
+  cyan: $cyan,
+  lilac: $lilac,
+  lightoceanblue: $lightoceanblue,
+  darkoceanblue: $darkoceanblue,
+  darkwhite: $darkwhite,
+  seaserpent: $seaserpent,
+  darkcyan: $darkcyan,
+  snow: $snow,
+  blue: $blue,
+  lightdashblue: $lightdashblue,
+  laurelgreen: $laurelgreen,
+  pastelmint: $pastelmint,
+  fizzbrown: $fizzbrown,
+  potterclay: $potterclay,
+  internationalorange: $internationalorange
+);

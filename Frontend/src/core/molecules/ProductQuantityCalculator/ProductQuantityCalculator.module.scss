@@ -1,0 +1,102 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.calculator {
+  &_toggleWrapper {
+    @include toRem('margin', 15 0 25 0);
+    @include toRem('max-width', 320);
+    & .calculator_toggle {
+      cursor: pointer;
+      background-color: $tablightwhite;
+      color: $darkgrey;
+      border: 1px solid $darkwhite;
+      @include toRem('margin-right', 10);
+      @include toRem('padding', 5 15);
+      @include toRem('border-radius', 4);
+      &:hover {
+        color: $orange;
+        border-color: $darkwhite;
+        background-color: $tablightwhite;
+      }
+    }
+  }
+  background: $white;
+  @include toRem('font-size', 16);
+  @include toRem('padding', 15 15 40 15);
+  .calculatorWrapper {
+    @include toRem('margin-bottom', 30);
+    .title {
+      margin-bottom: 0;
+      background-color: $darkoceanblue;
+      color: $white;
+      @include toRem('padding', 6 20);
+    }
+    .container {
+      background-color: $lightgray;
+      .items {
+        @include toRem('padding', 20);
+        @include toRem('gap', 15);
+        .item {
+          height: fit-content;
+          flex-basis: 45%;
+          border: 1px solid $grey;
+          background-color: $white;
+          @include toRem('padding', 20);
+          @include toRem('border-radius', 8);
+          .calculatorFormWrapper {
+            .radio {
+              input {
+                cursor: pointer;
+              }
+            }
+            .dropdown {
+              @include toRem('width', 177);
+            }
+          }
+          .petItem {
+            @include toRem('padding', 10 20);
+            border-bottom: 1px solid $grey;
+          }
+          .removePet {
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    appearance: none;
+  }
+  & .formInput {
+    border: 1px solid $grey;
+    @include toRem('padding', 3 5);
+    @include toRem('width', 37);
+    @include toRem('margin', 0 5);
+    @include toRem('font-size', 14);
+    @include toRem('border-radius', 4);
+  }
+  & .formButton {
+    color: $white;
+    background-color: $darkoceanblue;
+    border-color: $darkoceanblue;
+    @include toRem('margin-bottom', 3);
+    @include toRem('margin-top', 30);
+    &:active {
+      color: $white;
+      background-color: $darkoceanblue;
+      border-color: $darkoceanblue;
+    }
+    &.calculateBtn {
+      @include toRem('margin', 20);
+    }
+    .actionIcon {
+      transform: rotate(270deg);
+      align-items: center;
+      @include toRem('margin-left', 4);
+    }
+  }
+  .recommendationWrapper {
+    @include toRem('margin', 0 20);
+  }
+}

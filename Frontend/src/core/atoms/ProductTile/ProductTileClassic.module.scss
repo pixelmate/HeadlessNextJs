@@ -1,0 +1,54 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.container {
+  background-color: $white;
+  border: 1px solid transparent;
+  @include toRem('margin-bottom', 20);
+  @include toRem('border-radius', 4);
+}
+
+.heading {
+  color: $charcoal;
+  background-color: $lightgray;
+  border-color: $grey;
+  border-bottom: 1px solid transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  @include toRem('padding', 10 15);
+  @include toRem('border-top-right-radius', 3);
+  @include toRem('border-top-left-radius', 3);
+  @include toRem('font-size', 16);
+  color: inherit;
+}
+
+.body {
+  @include toRem('padding', 15);
+}
+
+.imageWrapper {
+  @include toRem('margin-bottom', 16)
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  @include toRem('height', 44);
+  @include toRem('padding-bottom', 12);
+  @include toRem('padding-top', 12);
+  @include toRem('min-width', 180);
+  color: $sealbrown;
+  font-weight: bold;
+}
+
+.packText {
+  @include toRem('font-size', 18);
+}
+
+.priceText {
+  @include toRem('font-size', 24);
+}
+
+.pricingText {
+  @include toRem('font-size', 14);
+}

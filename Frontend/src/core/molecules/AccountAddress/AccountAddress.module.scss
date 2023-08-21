@@ -1,0 +1,20 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.addressPanel {
+  border: 1px solid $mediumgray;
+  @include toRem('border-radius', 3);
+  &_heading {
+    background-color: $palegray;
+    border-bottom: 1px solid $mediumgray;
+    @include toRem('padding', 7 15);
+    @include toRem('margin', 0 0 20);
+    font-weight: 500;
+  }
+  &_addressPanelForm {
+    @include toRem('padding', 0 15 15);
+  }
+  &_cancel {
+    color: $darkgray;
+  }
+}

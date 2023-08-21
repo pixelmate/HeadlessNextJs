@@ -1,0 +1,20 @@
+@import 'styles/sass/abstracts/mixins';
+
+.ctaContainer {
+  &_imageContainer {
+    img {
+      @include toRem('width', 18);
+      height: auto;
+    }
+  }
+  &_content {
+    width: fit-content;
+    border-radius: 22px;
+  }
+  &_button {
+    @include toRem('padding', 12 18);
+    &:hover {
+      opacity: 80%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.input {
+  color: $tuna;
+  border: 1px solid $linkWater;
+  @include toRem('padding', 5);
+  @include toRem('font-size', 14);
+}

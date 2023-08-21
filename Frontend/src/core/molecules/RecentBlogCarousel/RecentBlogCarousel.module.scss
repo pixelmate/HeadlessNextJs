@@ -1,0 +1,42 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/mixins';
+
+.gallery {
+  width: 100%;
+  @include toRem('padding-bottom', 10);
+}
+
+.caption {
+  &_rte {
+    background: transparent;
+    @include toRem('padding', 0);
+    @include toRem('top', 0);
+    @include toRem('margin', 0);
+    .caption_title {
+      @include toRem('margin', 0);
+    }
+    h3 {
+      background: $black;
+      @include toRem('margin', 0);
+      @include toRem('padding', 5 15 5 10);
+      @include toRem('line-height', 24);
+    }
+  }
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  max-width: 90%;
+  background-color: $black;
+  @include toRem('padding', 5 15 5 5);
+  &_title {
+    text-transform: uppercase;
+    font-weight: 500;
+    @include toRem('margin', 5);
+    @include toRem('font-size', 16);
+    h3 {
+      font-size: inherit;
+    }
+  }
+}

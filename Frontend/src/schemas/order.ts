@@ -1,0 +1,27 @@
+import { Order as OCOrder } from 'ordercloud-javascript-sdk';
+
+export const mapOCOrder = (order: OCOrder): Order => ({
+  id: order.ID ?? '',
+  fromCompanyID: order.FromCompanyID ?? '',
+  toCompanyID: order.ToCompanyID ?? '',
+  fromUserID: order.FromUserID ?? '',
+  billingAddressID: order.BillingAddressID ?? '',
+  shippingAddressID: order.ShippingAddressID ?? '',
+  comments: order.Comments ?? '',
+  status: order.Status ?? '',
+  dateCreated: order.DateCreated ?? '',
+  dateSubmitted: order.DateSubmitted ?? '',
+  dateApproved: order.DateApproved ?? '',
+  dateDeclined: order.DateDeclined ?? '',
+  dateCanceled: order.DateCanceled ?? '',
+  dateCompleted: order.DateCompleted ?? '',
+  lastUpdated: order.LastUpdated ?? '',
+  subtotal: order.Subtotal ?? 0,
+  shippingCost: order.ShippingCost ?? 0,
+  taxCost: order.TaxCost ?? 0,
+  promotionDiscount: order.PromotionDiscount ?? 0,
+  currency: order.Currency ?? '',
+  total: order.Total ?? 0,
+  isSubmitted: order.IsSubmitted ?? false,
+  xp: order.xp,
+});

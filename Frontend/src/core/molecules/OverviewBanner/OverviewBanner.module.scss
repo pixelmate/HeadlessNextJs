@@ -1,0 +1,50 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.overviewBannerWrapper {
+  @include toRem('padding', 0);
+}
+.overviewBanner {
+  &_trustcontainer {
+    @include respond-to('tab') {
+      align-items: center;
+    }
+  }
+  &_trustpilot {
+    @include respond-to('tab') {
+      transform: scale(0.9);
+      transform-origin: 0 50%;
+    }
+  }
+  &_bannerInformation {
+    position: relative;
+    z-index: inherit;
+    @include respond-to('tab') {
+      @include toRem('margin-top', -690);
+    }
+  }
+  &_image {
+    @include toRem('height', 332);
+    width: 100%;
+    object-fit: cover;
+    @include respond-to('tab') {
+      @include toRem('height', 690);
+    }
+  }
+  &_description {
+    @include respond-to('tab') {
+      @include toRem('padding', 20);
+    }
+  }
+  &_button {
+    cursor: pointer;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    @include toRem('border-radius', 22);
+    @include toRem('padding', 12 18);
+    @include toRem('padding', 10 11);
+    &:hover {
+      opacity: 80%;
+    }
+  }
+}

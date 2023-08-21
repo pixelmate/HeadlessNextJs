@@ -1,0 +1,8 @@
+@import 'styles/sass/abstracts/mixins';
+.title {
+  @include toRem('font-size', 18);
+  font-weight: bold;
+}
+.modal > div {
+  @include toRem('max-width', 600);
+}

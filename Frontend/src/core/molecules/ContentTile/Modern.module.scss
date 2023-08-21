@@ -1,0 +1,28 @@
+@import 'styles/sass/abstracts/mixins';
+
+.modern {
+  &_heading {
+    font-weight: bold;
+    @include toRem('font-size', 36);
+    @include toRem('padding', 60);
+    @include toRem('line-height', 47);
+    @include respond-to('all-mobile') {
+      font-family: 'omnes-pro', sans-serif;
+      @include toRem('font-size', 30);
+    }
+  }
+
+  &_description {
+    font-weight: normal;
+  }
+  &_rich_text_style {
+    @include toRem('padding', 60);
+  }
+}
+
+.modern_row > * {
+  @include respond-to('all-mobile') {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}

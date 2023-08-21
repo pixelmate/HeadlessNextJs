@@ -1,0 +1,19 @@
+@import 'styles/sass/variables/variables';
+@import 'styles/sass/abstracts/_mixins';
+
+.shipping_modal {
+  &_col {
+    flex: 0 0 100%;
+    @include respond-to('large-desktop') {
+      flex: 0 0 50%;
+    }
+  }
+
+  .cancel_button {
+    border-color: $darkwhite;
+    &:hover {
+      border-color: $darkwhite;
+      background-color: $palegray;
+    }
+  }
+}

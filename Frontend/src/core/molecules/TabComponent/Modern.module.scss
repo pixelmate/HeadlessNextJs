@@ -1,0 +1,39 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+.modern_Container {
+  .iconContainer {
+    justify-content: space-around;
+    @include toRem('padding', 0 15);
+    @include toRem('margin-top', 26);
+    @include respond-to('tab') {
+      justify-content: center;
+      @include toRem('margin-top', 0);
+    }
+  }
+  .icons {
+    &_img {
+      height: auto;
+      @include toRem('width', 60);
+      @include respond-to('tab') {
+        @include toRem('padding', 20 20 10 20);
+        @include toRem('width', 100);
+      }
+    }
+    &_text {
+      font-weight: 700;
+      color: $greentabicon;
+      @include toRem('font-size', 12);
+      @include toRem('line-height', 17.15);
+    }
+  }
+  .responsive_image {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.modern {
+  background: $black;
+  color: $white;
+  border-bottom-color: $black;
+}

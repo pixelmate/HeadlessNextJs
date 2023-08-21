@@ -1,0 +1,2 @@
+export const DEFAULT_GIFT_CERTIFICATE_DESIGN = '1';
+export const MAX_CHARACTER_LIMIT = 100;

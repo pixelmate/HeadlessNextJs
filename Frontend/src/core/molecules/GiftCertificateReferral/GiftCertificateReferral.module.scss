@@ -1,0 +1,13 @@
+@import 'styles/sass/abstracts/mixins';
+
+.referralText {
+  @include toRem('font-size', 14);
+}
+
+.referralRow {
+  @include respond-to('tab') {
+    > * {
+      padding: 0;
+    }
+  }
+}

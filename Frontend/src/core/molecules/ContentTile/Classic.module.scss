@@ -1,0 +1,30 @@
+@import 'styles/sass/abstracts/mixins';
+
+.classic {
+  &_heading {
+    @include toRem('font-size', 74);
+    font-weight: 500;
+    @include toRem('letter-spacing', 8);
+    margin: 0;
+  }
+
+  &_description {
+    @include toRem('font-size', 20);
+    font-weight: normal;
+    @include toRem('padding', 0 0);
+    p {
+      @include respond-to('tab') {
+        padding-left: 40px;
+      }
+    }
+  }
+
+  &_featuredImage {
+    @include toRem('margin', 20 0 0 0);
+    max-width: 100%;
+    height: auto;
+    @include respond-to('desktop') {
+      margin: 0;
+    }
+  }
+}

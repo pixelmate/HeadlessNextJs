@@ -1,0 +1,12 @@
+@import 'styles/sass/abstracts/mixins';
+
+.btnWrapper {
+  @include toRem('margin-bottom', 60);
+  @include toRem('padding', 8 16);
+}
+.btn {
+  border: none;
+  @include toRem('font-size', 22);
+  @include toRem('padding', 10 26);
+  @include toRem('border-radius', 50);
+}

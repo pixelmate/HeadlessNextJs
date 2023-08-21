@@ -1,0 +1,75 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.featureLinkList {
+  @include toRem('padding', 40);
+  @include toRem('margin-bottom', 60);
+  overflow-x: hidden;
+
+  .img_wrapper {
+    @include respond-to('all-mobile') {
+      display: none !important;
+    }
+  }
+
+  &_detail {
+    p {
+      @include respond-to('all-mobile') {
+        font-family: 'omnes-pro', sans-serif;
+      }
+    }
+    @include respond-to('desktop') {
+      @include toRem('padding-right', 60);
+    }
+    @include respond-to('tablet-mobile') {
+      @include toRem('margin-bottom', 60);
+    }
+    h3 {
+      font-family: 'foco', sans-serif;
+      @include toRem('font-size', 30);
+      @include toRem('margin-bottom', 40);
+      font-weight: 500;
+      @include respond-to('desktop') {
+        @include toRem('font-size', 36);
+      }
+    }
+  }
+  ul {
+    @include toRem('padding', 0);
+    text-align: center;
+    list-style: none;
+    @include respond-to('desktop') {
+      @include toRem('padding', 0 0 0 40);
+    }
+    li {
+      @include toRem('padding', 10 0);
+      border-bottom: 1px solid $black;
+      cursor: text;
+      @include respond-to('desktop') {
+        text-align: left;
+      }
+      &:first-child {
+        background-color: $black;
+        font-weight: 500;
+        color: $orange;
+        @include toRem('border-radius', 4);
+        @include toRem('margin-bottom', 10);
+        @include respond-to('desktop') {
+          text-align: center;
+          @include toRem('font-size', 26);
+        }
+      }
+      > * {
+        margin: 0;
+      }
+      h6 {
+        @include toRem('font-size', 20);
+        font-family: 'foco', sans-serif;
+        @include respond-to('all-mobile') {
+          font-family: 'omnes-pro', sans-serif;
+          @include toRem('font-size', 24);
+        }
+      }
+    }
+  }
+}

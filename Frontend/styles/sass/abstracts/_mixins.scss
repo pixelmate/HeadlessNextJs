@@ -1,0 +1,150 @@
+@use 'sass:math';
+
+/* breakpoints */
+$break-high-resolution-desktop: 1920px;
+$break-extra-large-desktop: 1400px;
+$break-root-font: 1600px;
+$break-large-desktop: 1200px;
+$break-tab-pro: 1024px;
+$break-desktop: 992px;
+$break-tab: 768px;
+$break-mobile: 380px;
+$break-mobile-horizontal: 640px;
+$break-mobile-large: 786px;
+$tablet: 767px;
+
+@function getRem($val) {
+  @if $val == auto {
+    @return auto;
+  } @else if $val == 0 {
+    @return 0;
+  } @else {
+    @return math.div($val, 16) + rem;
+  }
+}
+
+// To Convert px to rem units
+@mixin toRem($property, $values) {
+  $result: ();
+
+  @each $value in $values {
+    $calculated: getRem($value);
+    $result: append($result, $calculated);
+  }
+
+  #{$property}: $result;
+}
+
+@mixin respond-to($media) {
+  @if $media==mobile {
+    @media only screen and (max-width: $break-mobile) {
+      @content;
+    }
+  } @else if $media==mobile-first {
+    @media only screen and (min-width: $break-mobile) {
+      @content;
+    }
+  } @else if $media==mobile-horizontal {
+    @media only screen and (max-width: $break-mobile-horizontal-1) {
+      @content;
+    }
+  } @else if $media==mobile-large {
+    @media only screen and (max-width: $break-mobile-large) {
+      @content;
+    }
+  } @else if $media==tablet {
+    @media only screen and (min-width: $break-tab) and (max-width: $break-desktop) {
+      @content;
+    }
+  } @else if $media==tablet-pro {
+    @media only screen and (min-width: $break-tab) and (max-width: $break-tab-pro) and (orientation: portrait) {
+      @content;
+    }
+  } @else if $media==tablet-high-resolution-desktop {
+    @media only screen and (min-width: $break-desktop) and (max-width: $break-high-resolution-desktop-1) {
+      @content;
+    }
+  } @else if $media==tablet-mobile {
+    @media only screen and (max-width: $break-desktop) {
+      @content;
+    }
+  } @else if $media==all-mobile {
+    @media only screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $media==tab {
+    @media only screen and (min-width: $break-tab) {
+      @content;
+    }
+  } @else if $media==tab-pro {
+    @media only screen and (min-width: $break-tab-pro) {
+      @content;
+    }
+  } @else if $media==desktop {
+    @media only screen and (min-width: $break-desktop) {
+      @content;
+    }
+  } @else if $media==large-desktop {
+    @media only screen and (min-width: $break-large-desktop) {
+      @content;
+    }
+  } @else if $media==tab-horizontal {
+    @media only screen and (min-width: $break-desktop) and (max-width: $break-large-desktop) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $media==mob-horizontal {
+    @media only screen and (min-width: $break-mobile) and (max-width: $break-desktop) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $media==extra-large-desktop {
+    @media only screen and (min-width: $break-extra-large-desktop) {
+      @content;
+    }
+  } @else if $media==break-extra-semi-mid-desktop {
+    @media only screen and (min-width: $break-extra-large-desktop) and (max-width: $break-root-font-1) {
+      @content;
+    }
+  } @else if $media==break-extra-mid-desktop {
+    @media only screen and (min-width: $break-root-font) and (max-width: $break-high-resolution-desktop-1) {
+      @content;
+    }
+  } @else if $media==break-extra-extra-large-desktop {
+    @media only screen and (min-width: $break-high-resolution-desktop) {
+      @content;
+    }
+  } @else if $media==break-root-font {
+    @media only screen and (min-width: $break-root-font) {
+      @content;
+    }
+  }
+}
+
+@mixin background-opacity($color, $opacity: 1) {
+  background-color: rgba($color, $opacity);
+}
+
+@mixin buttonStyling($bgColor, $textColor, $borderColor) {
+  color: $textColor;
+  text-decoration: none;
+  @include toRem('font-size', 16);
+  @include toRem('line-height', 16);
+  @include toRem('border-radius', 4);
+  @include toRem('padding', 5 25 7 25);
+  &:hover {
+    background-color: darken($bgColor, 5%);
+    border-color: darken($borderColor, 1%);
+    color: darken($textColor, 5%);
+  }
+}
+
+@mixin fieldRepSectionInfo($bgColor) {
+  @include toRem('margin-bottom', 20);
+  background-color: $bgColor;
+  border: 1px solid transparent;
+  @include toRem('border-radius', 4);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: $grey;
+  @include toRem('padding', 15);
+  @include toRem('font-size', 14);
+}

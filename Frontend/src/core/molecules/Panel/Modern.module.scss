@@ -1,0 +1,25 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.panel{
+    border: 1px solid;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @include toRem('margin', 0);
+    @include toRem('border-radius', 3);
+    &_icon{
+      @include toRem('height', 60);
+      @include toRem('width', 60);
+      @include toRem('margin-right', 10);
+    }
+    &_heading{
+      display: flex;
+      width: 100%;
+      @include toRem('font-size', 24);
+      @include toRem('padding', 10 15);
+      @include toRem('margin', 0);
+      @include toRem('border-radius', 3);
+    } 
+}

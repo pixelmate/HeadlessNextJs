@@ -1,0 +1,1 @@
+export const MAX_GIFT_ORDER_MESSAGE_LENGTH = 175;

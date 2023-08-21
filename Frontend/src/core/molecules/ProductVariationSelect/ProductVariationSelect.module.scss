@@ -1,0 +1,11 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.variationSelect {
+  width: auto;
+  @include toRem('font-size', 20)
+}
+
+.variationLabel {
+  @include toRem('font-size', 16)
+}

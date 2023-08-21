@@ -1,0 +1,8 @@
+@import 'styles/sass/abstracts/mixins';
+
+.icon {
+  @include toRem('bottom', 5);
+  @include toRem('right', 5);
+  position: fixed;
+  cursor: pointer;
+}

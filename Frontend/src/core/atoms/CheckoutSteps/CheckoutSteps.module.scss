@@ -1,0 +1,31 @@
+@import 'styles/sass/abstracts/mixins';
+@import 'styles/sass/variables/variables';
+
+.stepsWrapper {
+  &_stepHeading {
+    @include toRem('font-size', 22);
+    @include toRem('margin', 0 0 15);
+  }
+  &_steps {
+    display: flex;
+    align-items: center;
+    @include respond-to('tab') {
+      justify-content: flex-end;
+    }
+    &_stepBubble {
+      border-radius: 50%;
+      display: inline-block;
+      background-color: $grey;
+      @include toRem('width', 50);
+      @include toRem('height', 50);
+      @include toRem('margin', 0 5 0 0);
+    }
+    svg {
+      color: $green;
+      @include toRem('margin', 0 5 0 0);
+    }
+    &_activeStep {
+      background-color: $green;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'styles/sass/abstracts/mixins';
+
+.featured {
+  &_wrapper {
+    @include toRem('padding', 40);
+    @include respond-to('tab') {
+      @include toRem('padding', 120 40);
+    }
+  }
+
+  &_heading {
+    font-weight: bold;
+    @include toRem('font-size', 30);
+    @include toRem('margin', 0 0 40 0);
+  }
+
+  &_content_heading {
+    @include toRem('font-size', 74);
+    @include toRem('padding', 0 40);
+  }
+
+  &_description {
+    @include toRem('font-size', 20);
+    font-weight: normal;
+  }
+}
